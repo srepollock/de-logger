@@ -3,7 +3,6 @@
 
 # npm files
 node_modules/
-package-lock.json
 
 # Rollup
 .rpt2_cache/
