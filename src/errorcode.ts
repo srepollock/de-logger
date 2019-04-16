@@ -1,5 +1,5 @@
 /**
- * Engine error codes
+ * Error codes
  */
 export enum ErrorCode {
     OK = 0,
@@ -7,8 +7,8 @@ export enum ErrorCode {
     Error, // General Errors
     DocumentUndefined,
     EngineInitialization = 100, // Engine Errors
-    EngineInstanceUndefined,
-    EngineInstanceNotUndefined,
+    EngineInstanceNull,
+    EngineInstanceNotNull,
     EngineClientNotSet,
     EngineWindowUndefined,
     EngineStartedEarly,
@@ -24,12 +24,10 @@ export enum ErrorCode {
     ListenerUndefined,
     BrowserWindowUndefined = 300, // BrowserWindow Errors
     BrowserWindowDidNotClose,
-    ContainerUndefined,
     SceneUndefined = 400, // Scene Errors
     SceneNameUndefined,
     SceneManagerUndefined,
     SceneManagerCleanupFailed,
-    SceneNotLoaded,
     EntityInitialization = 500, // Entity Errors
     EntityParentUndefined,
     EntityAlreadyHasChild,
@@ -40,23 +38,11 @@ export enum ErrorCode {
     RenderSystemInitializationFailed,
     CanvasNotFound,
     RenderSystemCleanupFailed,
-    PhysicsSystemUndefined = 700, // PhysicsSystem Error
     WindowUndefined, // Window Errors
     GameWindowUndefined,
-    AssetLoaderUninitialized, // Asset Errors
-    AssetManagerUndefined,
+    AssetLoaderUninitialized = 700, // AssetLoader
     NoFileExtension,
-    NoAssetName,
-    LoadAssetFailed,
-    JSONAssetNotLoaded,
-    JSONDataUndefined,
-    AssetManagerDidNotGetAsset,
-    JSONLoaderPathImport,
-    JSONLoaderFsImport,
-    JSONLoaderFsStat,
-    FileDoesNotExist,
-    FileDataUndefined,
-    ErrorLoadingFile = 800, // Helper Function Errors
+    ErrorLoadingFile, // Helper Function Errors
     ReadJSONFile,
     WriteJSONFile,
     FileContentsNotRead,
