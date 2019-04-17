@@ -9,12 +9,14 @@ export enum ErrorCode {
     EngineInitialization = 100, // Engine Errors
     EngineInstanceNull,
     EngineInstanceNotNull,
+    EngineInstanceUndefined,
     EngineClientNotSet,
     EngineWindowUndefined,
     EngineStartedEarly,
     EngineRunning,
     EngineNotRunning,
     EngineCleanupFailed,
+    ContainerUndefined,
     MessageSystemInitialization = 200, // MessageSystem Errors
     MessageSystemUndefined,
     DuplicateListener,
@@ -40,7 +42,9 @@ export enum ErrorCode {
     RenderSystemCleanupFailed,
     WindowUndefined, // Window Errors
     GameWindowUndefined,
-    AssetLoaderUninitialized = 700, // AssetLoader
+    PhysicsSystemUndefined = 700, // Physics Errors
+    AssetLoaderUninitialized = 800, // AssetLoader
+    AssetManagerUndefined,
     NoFileExtension,
     ErrorLoadingFile, // Helper Function Errors
     ReadJSONFile,
