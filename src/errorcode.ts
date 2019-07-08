@@ -39,6 +39,8 @@ export enum ErrorCode {
     RenderSystemUndefined = 600, // RenderSystem Errors
     RenderSystemInitializationFailed,
     CanvasNotFound,
+    CanvasNotDefined,
+    BabylonRenderEngine,
     RenderSystemCleanupFailed,
     WindowUndefined, // Window Errors
     GameWindowUndefined,
@@ -46,6 +48,10 @@ export enum ErrorCode {
     AssetLoaderUninitialized = 800, // AssetLoader
     AssetManagerUndefined,
     NoFileExtension,
+    JSONDataUndefined,
+    LoadAssetFailed,
+    NoAssetName,
+    AssetManagerDidNotGetAsset,
     ErrorLoadingFile, // Helper Function Errors
     ReadJSONFile,
     WriteJSONFile,

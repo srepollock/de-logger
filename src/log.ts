@@ -1,4 +1,6 @@
-import { ErrorCode, LogLevel } from ".";
+import { ErrorCode } from "./errorcode";
+import { LogLevel } from "./loglevel";
+
 /**
  * Logging system. This is a simple command that takes the log level and prints to the console based on the level. Has 
  * some other general error functionality that can be super useful. Follows some general conventions about different 
