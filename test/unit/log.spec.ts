@@ -5,6 +5,7 @@ import { LogLevel } from "../../src/loglevel";
 describe("Log tests", () => {
     it("should log info", () => {
         expect(log(LogLevel.info, "Something cool")).to.contain("Info");
+        expect(log(LogLevel.info, "Something cool")).to.be("\t\x1b[32mSomething cool\x1b[0m");
     });
     it("should log debug when NODE_DEBUG environment is true", () => {
         process.env.NODE_DEBUG = "true";

@@ -44,6 +44,7 @@ export enum ErrorCode {
     RenderSystemCleanupFailed,
     WindowUndefined, // Window Errors
     GameWindowUndefined,
+    NotElectronWindow,
     PhysicsSystemUndefined = 700, // Physics Errors
     AssetLoaderUninitialized = 800, // AssetLoader
     AssetManagerUndefined,
