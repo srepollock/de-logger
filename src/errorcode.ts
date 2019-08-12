@@ -40,8 +40,10 @@ export enum ErrorCode {
     RenderSystemInitializationFailed,
     CanvasNotFound,
     CanvasNotDefined,
-    BabylonRenderEngine,
     RenderSystemCleanupFailed,
+    SceneNotFound,
+    SceneNotActive,
+    SceneTimedOut,
     WindowUndefined, // Window Errors
     GameWindowUndefined,
     NotElectronWindow,
@@ -53,6 +55,7 @@ export enum ErrorCode {
     LoadAssetFailed,
     NoAssetName,
     AssetManagerDidNotGetAsset,
+    TextureNotLoaded,
     ErrorLoadingFile, // Helper Function Errors
     ReadJSONFile,
     WriteJSONFile,
