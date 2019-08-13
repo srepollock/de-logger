@@ -44,11 +44,12 @@ export enum ErrorCode {
     SceneNotFound,
     SceneNotActive,
     SceneTimedOut,
+    SoundSystemUndefined = 700, // Sound System
     WindowUndefined, // Window Errors
     GameWindowUndefined,
     NotElectronWindow,
-    PhysicsSystemUndefined = 700, // Physics Errors
-    AssetLoaderUninitialized = 800, // AssetLoader
+    PhysicsSystemUndefined = 800, // Physics Errors
+    AssetLoaderUninitialized = 900, // AssetLoader
     AssetManagerUndefined,
     NoFileExtension,
     JSONDataUndefined,
