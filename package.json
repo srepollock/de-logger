@@ -1,19 +1,17 @@
 {
   "name": "de-loggingsystem",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A logger for the Divine Engine",
   "main": "./lib/de-loggingsystem.umd.ts",
   "module": "./lib/de-loggingsystem.es.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "bundle": "rollup -c",
+    "bundle": "tsc; rollup -c",
     "commit": "npm run lint; git add --all; git-cz",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "docs": "typedoc --excludeExternals --externalPattern \"node_modules/**\" --ignoreCompilerErrors --name Divine\\ Engine\\ \\Logger API --out docs --mode file --target ESNext --readme none src/*",
     "lint": "tslint src/**/*.ts -c tslint.json",
-    "semantic-release": "semantic-release",
-    "prepublish": "npm run bundle",
+    "prepare": "npm run bundle",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/**/*.spec.ts"
   },
   "repository": {
@@ -26,8 +24,7 @@
     "url": "https://github.com/srepollock/de-logger/issues"
   },
   "homepage": "http://spollock.ca/de-logger",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "node": "^11.12.0",
