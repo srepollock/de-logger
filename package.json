@@ -1,5 +1,5 @@
 {
-  "name": "de-logger",
+  "name": "de-loggingsystem",
   "version": "0.0.1",
   "description": "A logger for the Divine Engine",
   "main": "src/index.ts",
@@ -9,6 +9,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "docs": "typedoc --excludeExternals --externalPattern \"node_modules/**\" --ignoreCompilerErrors --name Divine\\ Engine\\ \\Logger API --out docs --mode file --target ESNext --readme none src/*",
     "lint": "tslint src/**/*.ts -c tslint.json",
+    "postinstall": "npm run build",
     "semantic-release": "semantic-release",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/**/*.spec.ts"
   },
