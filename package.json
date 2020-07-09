@@ -6,11 +6,15 @@
   "module": "./lib/de-loggingsystem.es.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "bundle": "tsc; rollup --config rollup.config.js",
+    "build": "tsc",
+    "prebundle": "npm run clean; npm run build",
+    "bundle": "rollup --config rollup.config.js",
+    "clean": "rm -rf lib",
     "commit": "npm run lint; git add --all; git-cz",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "docs": "typedoc --excludeExternals --externalPattern \"node_modules/**\" --ignoreCompilerErrors --name Divine\\ Engine\\ \\Logger API --out docs --mode file --target ESNext --readme none src/*",
     "lint": "tslint src/**/*.ts -c tslint.json",
+    "lint:fix": "tslint src/**/*.ts -c tslint.json --fix",
     "prepare": "npm run bundle",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/**/*.spec.ts"
   },
