@@ -1,5 +1,5 @@
 {
-  "name": "de-loggingsystem",
+  "name": "@srepollock/de-loggingsystem",
   "version": "1.1.1",
   "description": "A logger for the Divine Engine",
   "main": "./lib/de-loggingsystem.umd.ts",
@@ -14,16 +14,16 @@
     "prepare": "npm run bundle",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/**/*.spec.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/srepollock/de-logger.git"
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/srepollock/de-loggingsystem.git"
   },
   "author": "Spencer Pollock <spencer@spollock.ca>",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/srepollock/de-logger/issues"
+    "url": "https://github.com/srepollock/de-loggingsystem/issues"
   },
-  "homepage": "http://spollock.ca/de-logger",
+  "homepage": "http://spollock.ca/de-loggingsystem",
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -50,6 +50,6 @@
     }
   },
   "publishConfig": {
-      "registry": "https://npm.pkg.github.com/@srepollock/"
+      "registry": "https://npm.pkg.github.com/"
   }
 }
