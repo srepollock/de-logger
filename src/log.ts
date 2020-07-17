@@ -20,7 +20,7 @@ export function log(level: LogLevel, message: string, ec?: ErrorCode): string {
         case LogLevel.info:
             // tslint:disable-next-line: max-line-length
             // NOTE: Information to be displayed for the user. This is helpful information for the user about the game itself.
-            errorString = `Info\t${message}`;
+            errorString = `Info\t|| ${message}`;
             console.log("\t", "\x1b[32m", errorString, "\x1b[0m");
             break;
         case LogLevel.debug:
