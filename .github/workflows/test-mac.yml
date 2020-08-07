@@ -3,8 +3,9 @@ name: Test macOS
 on:
   push:
     branches:
-      - master
+      - trunk 
       - feature/*
+      - hotfix/*
 
 jobs:
   build:
