@@ -22,6 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm set //registry.npmjs.org/:_authToken ${{ secrets.NPM_TOKEN }}
+    - run: npm cache clean
     - run: npm login
     - run: npm install 
     - run: npm test
