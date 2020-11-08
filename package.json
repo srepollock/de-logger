@@ -14,8 +14,8 @@
     "prepare": "npm run bundle",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' mocha -r ts-node/register test/**/*.spec.ts"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com/srepollock/de-loggingsystem.git"
   },
   "author": "Spencer Pollock <spencer@spollock.ca>",
@@ -50,6 +50,6 @@
     }
   },
   "publishConfig": {
-      "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
